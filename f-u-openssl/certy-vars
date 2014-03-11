@@ -1,0 +1,36 @@
+export EASY_RSA="`pwd`"
+
+export OPENSSL="openssl"
+export PKCS11TOOL="pkcs11-tool"
+export GREP="grep"
+
+export KEY_CONFIG=''
+
+export KEY_DIR="$EASY_RSA/keys"
+
+export PKCS11_MODULE_PATH="dummy"
+export PKCS11_PIN="dummy"
+
+export KEY_SIZE=2048
+export KEY_SIZE=512
+
+export CA_EXPIRE=3650
+export KEY_EXPIRE=3650
+
+# antarctica
+export KEY_COUNTRY="AQ"
+# antarctica
+export KEY_PROVINCE="N/A"
+export KEY_CITY="Delphia"
+export KEY_ORG="PUCK"
+export KEY_EMAIL="puck@example.com"
+export KEY_OU="Crypto Cops"
+
+export COMMON_NAME="puckasaurus"
+
+# X509 Subject Field
+export KEY_NAME="PUCK"
+
+echo setting KEY_CN to $COMMON_NAME
+
+export KEY_CN=$COMMON_NAME
