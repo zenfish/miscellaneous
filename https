@@ -23,7 +23,7 @@ keyfile      = "/tmp/server.key"
 ca_certz     = "/tmp/ca.crt"
 
 # command to open up a URL & the server
-command      = "fetch_url"
+fetch_url    = "open"
 server       = "https://%s:%s/" % (host, port)
 
 # actual web server stuff
@@ -33,7 +33,7 @@ httpd.socket = ssl.wrap_socket (httpd.socket, ca_certs=ca_certz, certfile=certfi
 try:
     # fire up a browser to fetch the url, but sleep a few seconds to give the server a chance to get going
     if len(sys.argv) > 1:
-        shell_string = "(sleep 3; %s %s/%s) &" % (command, server, sys.argv[1])
+        shell_string = "(sleep 3; %s %s/%s) &" % (fetch_url, server, sys.argv[1])
         try:
             os.system(shell_string)
         except:
