@@ -6,10 +6,12 @@
 
 if [ "$KEY_DIR" ]; then
     rm -rf "$KEY_DIR"
-    mkdir "$KEY_DIR" && \
-	chmod go-rwx "$KEY_DIR" && \
-	touch "$KEY_DIR/index.txt" && \
-	echo 01 >"$KEY_DIR/serial"
+    mkdir "$KEY_DIR"
+	chmod go-rwx "$KEY_DIR"
+	touch "$KEY_DIR/index.txt"
+	bits_o_128=$(dd if=/dev/urandom bs=16 count=1 2>/dev/null| hexdump |awk '{$1=""; printf("%s", $0)}' | sed 's/ //g')
+    echo $bits_o_128 >"$KEY_DIR/serial"
+
 else
     echo 'Please source the vars script first (i.e. "source ./vars")'
     echo 'Make sure you have edited it to reflect your configuration.'

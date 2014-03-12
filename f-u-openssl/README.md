@@ -7,6 +7,9 @@ cert for vpn/whatever. Sticks them all in a subdir called "certitude".
 Probably done the wrong way. It seems to work.  I hate openssl.
 And openvpn. And pgp. And ssh. Crypto in general kinda blows.
 
+Serial number is somewhat random, so browsers whine less when you
+blow away the old one and replace it.
+
 
 -> Based on the easy rsa cert stuff <-
 
