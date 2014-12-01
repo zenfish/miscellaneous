@@ -2,6 +2,12 @@
 Some rough bits that don't go anywhere else
 --------------------------------------------
 
+Better dox are in the headers of all the various files
+
+
+block-all-but.sh - uses linux's iptables to block all ports but a few, 
+somewhat safe doing it over the net.
+
 https - a little python web SSL server... used it for testing some
 of my cert stuff.  Lots of these out there, this is mine for now.
 
